@@ -26,3 +26,9 @@ Nov 06 08:24:33.866 HYPERVISOR: exec_cmd: vm set_ios LER3 /Users/Filipe/GNS3/ima
 Nov 06 08:25:58.278 HYPERVISOR: exec_cmd: nio create_udp udp-fcd13458-48f7-4c97-9fd9-6d5f24df711b 10040 127.0.0.1 10041 
 Nov 06 08:25:58.307 HYPERVISOR: exec_cmd: vm slot_add_nio_binding LER3 0 0 udp-fcd13458-48f7-4c97-9fd9-6d5f24df711b 
 Nov 06 08:25:58.307 HYPERVISOR: exec_cmd: vm get_status LER3 
+Nov 06 08:28:25.753 HYPERVISOR: exec_cmd: vm get_status LER3 
+Nov 06 08:28:25.754 HYPERVISOR: exec_cmd: vm slot_remove_nio_binding LER3 0 0 
+Nov 06 08:28:25.758 HYPERVISOR: exec_cmd: nio delete udp-fcd13458-48f7-4c97-9fd9-6d5f24df711b 
+Nov 06 08:28:34.637 HYPERVISOR: exec_cmd: nio create_udp udp-2bd7fa77-a51f-40d9-b799-66e56366ac8b 10040 127.0.0.1 10041 
+Nov 06 08:28:34.639 HYPERVISOR: exec_cmd: vm slot_add_nio_binding LER3 0 0 udp-2bd7fa77-a51f-40d9-b799-66e56366ac8b 
+Nov 06 08:28:34.639 HYPERVISOR: exec_cmd: vm get_status LER3 

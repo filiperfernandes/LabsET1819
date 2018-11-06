@@ -36,3 +36,6 @@ Nov 06 08:25:29.456 HYPERVISOR: exec_cmd: vm get_status LSR1
 Nov 06 08:25:39.390 HYPERVISOR: exec_cmd: nio create_udp udp-33706eb5-7ae0-4125-8421-086d4375390b 10020 127.0.0.1 10021 
 Nov 06 08:25:39.392 HYPERVISOR: exec_cmd: vm slot_add_nio_binding LSR1 1 0 udp-33706eb5-7ae0-4125-8421-086d4375390b 
 Nov 06 08:25:39.393 HYPERVISOR: exec_cmd: vm get_status LSR1 
+Nov 06 08:27:57.757 HYPERVISOR: exec_cmd: nio create_udp udp-361aa938-6a93-4f09-958a-ffec09d12f97 10044 127.0.0.1 10045 
+Nov 06 08:27:57.759 HYPERVISOR: exec_cmd: vm slot_add_nio_binding LSR1 2 0 udp-361aa938-6a93-4f09-958a-ffec09d12f97 
+Nov 06 08:27:57.760 HYPERVISOR: exec_cmd: vm get_status LSR1 

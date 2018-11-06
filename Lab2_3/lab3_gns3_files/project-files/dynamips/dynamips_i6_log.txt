@@ -33,3 +33,7 @@ Nov 06 08:25:39.437 HYPERVISOR: exec_cmd: vm get_status LSR3
 Nov 06 08:25:48.806 HYPERVISOR: exec_cmd: nio create_udp udp-fd3dac51-0be1-454e-a3fd-389c751add80 10026 127.0.0.1 10027 
 Nov 06 08:25:48.808 HYPERVISOR: exec_cmd: vm slot_add_nio_binding LSR3 0 1 udp-fd3dac51-0be1-454e-a3fd-389c751add80 
 Nov 06 08:25:48.808 HYPERVISOR: exec_cmd: vm get_status LSR3 
+Nov 06 08:27:45.107 HYPERVISOR: exec_cmd: vm set_ios LSR3 /Users/Filipe/GNS3/images/IOS/c3725-advipservicesk9-mz.124-21.image 
+Nov 06 08:29:02.940 HYPERVISOR: exec_cmd: nio create_udp udp-7e9dfeab-74ba-4aaf-80d0-b9988859b74a 10050 127.0.0.1 10051 
+Nov 06 08:29:02.942 HYPERVISOR: exec_cmd: vm slot_add_nio_binding LSR3 1 0 udp-7e9dfeab-74ba-4aaf-80d0-b9988859b74a 
+Nov 06 08:29:02.943 HYPERVISOR: exec_cmd: vm get_status LSR3 
