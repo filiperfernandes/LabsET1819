@@ -15,7 +15,80 @@
     "supplier": null,
     "topology": {
         "computes": [],
-        "drawings": [],
+        "drawings": [
+            {
+                "drawing_id": "f1374640-ebb8-4c08-913a-aee90aec50ac",
+                "rotation": 0,
+                "svg": "<svg height=\"469\" width=\"767\"><rect fill=\"#ffffff\" fill-opacity=\"1.0\" height=\"469\" stroke=\"#000000\" stroke-width=\"2\" width=\"767\" /></svg>",
+                "x": -378,
+                "y": -221,
+                "z": -2
+            },
+            {
+                "drawing_id": "dd348fd6-e97f-4889-b83a-8bfde9c64466",
+                "rotation": 0,
+                "svg": "<svg height=\"20\" width=\"123\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\">Lab2 Network Topology</text></svg>",
+                "x": 230,
+                "y": 206,
+                "z": 1
+            },
+            {
+                "drawing_id": "41950eb6-d67a-45a4-b65e-1f4fc46ca1c2",
+                "rotation": 0,
+                "svg": "<svg height=\"20\" width=\"66\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\">10.0.0.0/30</text></svg>",
+                "x": -205,
+                "y": -185,
+                "z": 1
+            },
+            {
+                "drawing_id": "376cc42a-39b2-4d23-8d57-9a96975bec22",
+                "rotation": 0,
+                "svg": "<svg height=\"20\" width=\"66\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\">10.0.0.4/30</text></svg>",
+                "x": -7,
+                "y": -187,
+                "z": 1
+            },
+            {
+                "drawing_id": "f853abdf-db8a-46aa-8bd0-eb11499f2352",
+                "rotation": 0,
+                "svg": "<svg height=\"20\" width=\"66\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\">10.0.0.8/30</text></svg>",
+                "x": -235,
+                "y": -25,
+                "z": 1
+            },
+            {
+                "drawing_id": "110f2f6a-55b6-48fe-a459-209982d67fec",
+                "rotation": 0,
+                "svg": "<svg height=\"20\" width=\"73\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\">10.0.0.12/30</text></svg>",
+                "x": -132,
+                "y": -77,
+                "z": 1
+            },
+            {
+                "drawing_id": "66d5a9a6-9e25-4adf-9667-d95c9aafe9a4",
+                "rotation": 0,
+                "svg": "<svg height=\"20\" width=\"73\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\">10.0.0.16/30</text></svg>",
+                "x": 35,
+                "y": -30,
+                "z": 1
+            },
+            {
+                "drawing_id": "a2fde1fb-d0ab-4439-841a-d9d6cb11f28e",
+                "rotation": 0,
+                "svg": "<svg height=\"20\" width=\"73\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\">10.0.0.20/30</text></svg>",
+                "x": -10,
+                "y": 108,
+                "z": 1
+            },
+            {
+                "drawing_id": "61233c9b-7ec8-4dc6-953b-754e11fbee3c",
+                "rotation": 0,
+                "svg": "<svg height=\"20\" width=\"73\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\">10.0.0.24/30</text></svg>",
+                "x": 216,
+                "y": -189,
+                "z": 1
+            }
+        ],
         "links": [
             {
                 "filters": {},
@@ -238,7 +311,7 @@
         "nodes": [
             {
                 "compute_id": "local",
-                "console": 5000,
+                "console": 5009,
                 "console_type": "telnet",
                 "first_port_name": null,
                 "height": 59,
@@ -263,7 +336,7 @@
             },
             {
                 "compute_id": "local",
-                "console": 5002,
+                "console": 5011,
                 "console_type": "telnet",
                 "first_port_name": null,
                 "height": 59,
@@ -288,7 +361,7 @@
             },
             {
                 "compute_id": "local",
-                "console": 5004,
+                "console": 5013,
                 "console_type": "telnet",
                 "first_port_name": null,
                 "height": 45,
@@ -340,7 +413,7 @@
             },
             {
                 "compute_id": "local",
-                "console": 5005,
+                "console": 5014,
                 "console_type": "telnet",
                 "first_port_name": null,
                 "height": 45,
@@ -392,7 +465,7 @@
             },
             {
                 "compute_id": "local",
-                "console": 5006,
+                "console": 5015,
                 "console_type": "telnet",
                 "first_port_name": null,
                 "height": 45,
@@ -444,7 +517,7 @@
             },
             {
                 "compute_id": "local",
-                "console": 5007,
+                "console": 5016,
                 "console_type": "telnet",
                 "first_port_name": null,
                 "height": 45,
