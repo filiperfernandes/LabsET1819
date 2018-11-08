@@ -1,1 +1,0 @@
-Nov 06 08:24:04.423 VM: renamed from 'R6' to 'R5'Nov 06 08:24:04.424 VM: renamed from 'R5' to 'R6'Nov 06 08:24:48.382 VM: renamed from 'R6' to 'LSR3'

@@ -205,37 +205,6 @@
             },
             {
                 "filters": {},
-                "link_id": "ea2eb722-5930-43d8-8051-7a1d861cec14",
-                "nodes": [
-                    {
-                        "adapter_number": 2,
-                        "label": {
-                            "rotation": 0,
-                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
-                            "text": "f2/0",
-                            "x": 90,
-                            "y": 39
-                        },
-                        "node_id": "237b3eef-c5d6-43eb-9595-158befaf490c",
-                        "port_number": 0
-                    },
-                    {
-                        "adapter_number": 1,
-                        "label": {
-                            "rotation": 0,
-                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
-                            "text": "f1/0",
-                            "x": -54,
-                            "y": -15
-                        },
-                        "node_id": "45effeb2-f4fb-4a5b-97cb-600aa48c760f",
-                        "port_number": 0
-                    }
-                ],
-                "suspend": false
-            },
-            {
-                "filters": {},
                 "link_id": "53bf8598-70ec-4b7d-b4dc-830b758ffe75",
                 "nodes": [
                     {
@@ -291,6 +260,37 @@
                             "y": 54
                         },
                         "node_id": "ab478924-5ac8-42a4-b94e-d651dce4cdc4",
+                        "port_number": 0
+                    }
+                ],
+                "suspend": false
+            },
+            {
+                "filters": {},
+                "link_id": "ce3b8304-370d-4afa-aebd-559a2fe1d99a",
+                "nodes": [
+                    {
+                        "adapter_number": 0,
+                        "label": {
+                            "rotation": 0,
+                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                            "text": "f0/1",
+                            "x": 72,
+                            "y": 19
+                        },
+                        "node_id": "3473aa17-99cb-41ca-b36e-d805c421ad6d",
+                        "port_number": 1
+                    },
+                    {
+                        "adapter_number": 0,
+                        "label": {
+                            "rotation": 0,
+                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                            "text": "e0",
+                            "x": -7,
+                            "y": 32
+                        },
+                        "node_id": "791816ae-e0b2-467d-86f4-4c8cf77f4f59",
                         "port_number": 0
                     }
                 ],
@@ -660,6 +660,31 @@
                 "width": 66,
                 "x": 71,
                 "y": 66,
+                "z": 0
+            },
+            {
+                "compute_id": "local",
+                "console": 5007,
+                "console_type": "telnet",
+                "first_port_name": null,
+                "height": 59,
+                "label": {
+                    "rotation": 0,
+                    "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                    "text": "PC-1",
+                    "x": 16,
+                    "y": -25
+                },
+                "name": "PC-1",
+                "node_id": "791816ae-e0b2-467d-86f4-4c8cf77f4f59",
+                "node_type": "vpcs",
+                "port_name_format": "Ethernet{0}",
+                "port_segment_size": 0,
+                "properties": {},
+                "symbol": ":/symbols/vpcs_guest.svg",
+                "width": 65,
+                "x": 152,
+                "y": -209,
                 "z": 0
             }
         ]
