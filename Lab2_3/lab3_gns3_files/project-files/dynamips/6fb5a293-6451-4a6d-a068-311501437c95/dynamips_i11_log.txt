@@ -1,0 +1,19 @@
+Nov 14 11:42:18.895 HYPERVISOR: Release 0.2.17-amd64/Darwin (tag 2017072410)
+Nov 14 11:42:18.895 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 56785.
+Nov 14 11:42:18.905 HYPERVISOR: exec_cmd: hypervisor version 
+Nov 14 11:42:18.906 HYPERVISOR: exec_cmd: hypervisor working_dir /Users/Filipe/Documents/IST/METI/ET/Labs/Lab2_3/lab3_gns3_files/project-files/dynamips 
+Nov 14 11:42:18.906 GENERAL: working_dir=/Users/Filipe/Documents/IST/METI/ET/Labs/Lab2_3/lab3_gns3_files/project-files/dynamips
+Nov 14 11:42:18.906 HYPERVISOR: exec_cmd: ethsw create Ethernetswitch-1 
+Nov 14 11:42:21.172 HYPERVISOR: exec_cmd: nio create_udp udp-8f893e45-563e-43b5-af37-ee1da93c0c7e 10075 127.0.0.1 10074 
+Nov 14 11:42:21.173 HYPERVISOR: exec_cmd: ethsw add_nio Ethernetswitch-1 udp-8f893e45-563e-43b5-af37-ee1da93c0c7e 
+Nov 14 11:42:21.190 HYPERVISOR: exec_cmd: ethsw set_access_port Ethernetswitch-1 udp-8f893e45-563e-43b5-af37-ee1da93c0c7e 1 
+Nov 14 11:42:21.308 HYPERVISOR: exec_cmd: nio create_udp udp-ea7e1017-9d18-4a83-a7c7-c15ac79f5097 10078 127.0.0.1 10079 
+Nov 14 11:42:21.309 HYPERVISOR: exec_cmd: ethsw add_nio Ethernetswitch-1 udp-ea7e1017-9d18-4a83-a7c7-c15ac79f5097 
+Nov 14 11:42:21.327 HYPERVISOR: exec_cmd: ethsw set_access_port Ethernetswitch-1 udp-ea7e1017-9d18-4a83-a7c7-c15ac79f5097 1 
+Nov 14 11:42:21.477 HYPERVISOR: exec_cmd: nio create_udp udp-33415d2f-f29b-43b5-90af-e044813c458b 10083 127.0.0.1 10082 
+Nov 14 11:42:21.477 HYPERVISOR: exec_cmd: ethsw add_nio Ethernetswitch-1 udp-33415d2f-f29b-43b5-90af-e044813c458b 
+Nov 14 11:42:21.486 HYPERVISOR: exec_cmd: ethsw set_access_port Ethernetswitch-1 udp-33415d2f-f29b-43b5-90af-e044813c458b 1 
+Nov 14 13:07:37.886 HYPERVISOR: exec_cmd: ethsw delete Ethernetswitch-1 
+Nov 14 13:07:37.948 HYPERVISOR: exec_cmd: hypervisor stop 
+Nov 14 13:07:37.954 HYPERVISOR: Stopped.
+Nov 14 13:07:37.956 GENERAL: reset done.
