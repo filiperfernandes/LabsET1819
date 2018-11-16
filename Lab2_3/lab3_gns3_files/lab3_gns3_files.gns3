@@ -87,8 +87,8 @@
                             "rotation": 0,
                             "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
                             "text": "f0/0",
-                            "x": -29,
-                            "y": -31
+                            "x": 72,
+                            "y": -12
                         },
                         "node_id": "ab478924-5ac8-42a4-b94e-d651dce4cdc4",
                         "port_number": 0
@@ -540,8 +540,8 @@
                             "rotation": 0,
                             "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
                             "text": "f0/1",
-                            "x": 47,
-                            "y": -32
+                            "x": 54,
+                            "y": -23
                         },
                         "node_id": "3473aa17-99cb-41ca-b36e-d805c421ad6d",
                         "port_number": 1
