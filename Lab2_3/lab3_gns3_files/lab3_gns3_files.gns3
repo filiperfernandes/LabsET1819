@@ -628,8 +628,8 @@
                             "rotation": 0,
                             "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
                             "text": "f0/1",
-                            "x": -4,
-                            "y": 7
+                            "x": -28,
+                            "y": 16
                         },
                         "node_id": "508de605-6862-43c0-867d-7704e0657ed5",
                         "port_number": 1
@@ -649,8 +649,8 @@
                     "rotation": 0,
                     "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
                     "text": "LER1",
-                    "x": -25,
-                    "y": -23
+                    "x": 11,
+                    "y": -27
                 },
                 "name": "LER1",
                 "node_id": "508de605-6862-43c0-867d-7704e0657ed5",
@@ -687,8 +687,8 @@
                 },
                 "symbol": ":/symbols/router.svg",
                 "width": 66,
-                "x": -285,
-                "y": -148,
+                "x": -284,
+                "y": -142,
                 "z": 0
             },
             {
@@ -739,8 +739,8 @@
                 },
                 "symbol": ":/symbols/router.svg",
                 "width": 66,
-                "x": 71,
-                "y": -210,
+                "x": 72,
+                "y": -211,
                 "z": 0
             },
             {
@@ -1024,8 +1024,8 @@
                 "properties": {},
                 "symbol": ":/symbols/vpcs_guest.svg",
                 "width": 65,
-                "x": -536,
-                "y": -261,
+                "x": -535,
+                "y": -262,
                 "z": 0
             },
             {
@@ -1410,7 +1410,7 @@
                 },
                 "symbol": ":/symbols/router.svg",
                 "width": 66,
-                "x": 215,
+                "x": 216,
                 "y": -207,
                 "z": 0
             },
@@ -1435,8 +1435,8 @@
                 "properties": {},
                 "symbol": ":/symbols/vpcs_guest.svg",
                 "width": 65,
-                "x": 337,
-                "y": -215,
+                "x": 405,
+                "y": -228,
                 "z": 0
             }
         ]
