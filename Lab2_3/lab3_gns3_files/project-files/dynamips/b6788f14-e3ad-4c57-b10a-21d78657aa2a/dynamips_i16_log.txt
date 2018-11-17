@@ -1,0 +1,54 @@
+Nov 17 18:36:18.430 HYPERVISOR: Release 0.2.18-amd64/Linux (tag 2018033112)
+Nov 17 18:36:18.430 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 45755.
+Nov 17 18:36:18.440 HYPERVISOR: exec_cmd: hypervisor version 
+Nov 17 18:36:18.440 HYPERVISOR: exec_cmd: hypervisor working_dir /home/andre/Desktop/ET/LabsET1819/Lab2_3/lab3_gns3_files/project-files/dynamips 
+Nov 17 18:36:18.440 GENERAL: working_dir=/home/andre/Desktop/ET/LabsET1819/Lab2_3/lab3_gns3_files/project-files/dynamips
+Nov 17 18:36:18.441 HYPERVISOR: exec_cmd: hypervisor working_dir /home/andre/Desktop/ET/LabsET1819/Lab2_3/lab3_gns3_files/project-files/dynamips/219f70bd-68a6-4310-a805-27ef577d2858 
+Nov 17 18:36:18.441 GENERAL: working_dir=/home/andre/Desktop/ET/LabsET1819/Lab2_3/lab3_gns3_files/project-files/dynamips/219f70bd-68a6-4310-a805-27ef577d2858
+Nov 17 18:36:18.441 HYPERVISOR: exec_cmd: vm create CE4-1 15 c3725 
+Nov 17 18:36:18.441 VM: VM CE4-1 created.
+Nov 17 18:36:18.441 HYPERVISOR: exec_cmd: vm set_con_tcp_port CE4-1 5027 
+Nov 17 18:36:18.442 HYPERVISOR: exec_cmd: c3725 get_mac_addr CE4-1 
+Nov 17 18:36:18.442 HYPERVISOR: exec_cmd: vm set_disk0 CE4-1 0 
+Nov 17 18:36:18.442 HYPERVISOR: exec_cmd: vm get_status CE4-1 
+Nov 17 18:36:18.442 HYPERVISOR: exec_cmd: vm set_idle_pc CE4-1 0x60a6a1e0 
+Nov 17 18:36:18.443 HYPERVISOR: exec_cmd: vm set_ios CE4-1 /home/andre/GNS3/images/IOS/c3725-advipservicesk9-mz.124-21.image 
+Nov 17 18:36:18.443 HYPERVISOR: exec_cmd: c3725 set_mac_addr CE4-1 c20f.2680.0000 
+Nov 17 18:36:18.443 HYPERVISOR: exec_cmd: vm set_nvram CE4-1 256 
+Nov 17 18:36:21.333 HYPERVISOR: exec_cmd: nio create_udp udp-dc70bb2e-d7a6-4801-9ba5-4af35f88ae35 10120 127.0.0.1 10121 
+Nov 17 18:36:21.357 HYPERVISOR: exec_cmd: vm slot_add_nio_binding CE4-1 0 0 udp-dc70bb2e-d7a6-4801-9ba5-4af35f88ae35 
+Nov 17 18:36:21.357 HYPERVISOR: exec_cmd: vm get_status CE4-1 
+Nov 17 18:36:21.438 HYPERVISOR: exec_cmd: nio create_udp udp-74fe4b83-0e62-4e6b-bf26-d1d0f37079aa 10124 127.0.0.1 10125 
+Nov 17 18:36:21.439 HYPERVISOR: exec_cmd: vm slot_add_nio_binding CE4-1 0 1 udp-74fe4b83-0e62-4e6b-bf26-d1d0f37079aa 
+Nov 17 18:36:21.440 HYPERVISOR: exec_cmd: vm get_status CE4-1 
+Nov 17 18:36:39.379 HYPERVISOR: exec_cmd: vm set_ghost_status CE4-1 2 
+Nov 17 18:36:39.380 HYPERVISOR: exec_cmd: vm set_ghost_file CE4-1 /home/andre/Desktop/ET/LabsET1819/Lab2_3/lab3_gns3_files/project-files/dynamips/c3725-advipservicesk9-mz.124-21.image-128.ghost 
+Nov 17 18:36:39.395 HYPERVISOR: exec_cmd: vm get_status CE4-1 
+Nov 17 18:36:39.396 HYPERVISOR: exec_cmd: vm set_config CE4-1 configs/i15_startup-config.cfg 
+Nov 17 18:36:39.396 HYPERVISOR: exec_cmd: vm start CE4-1 
+Nov 17 18:47:39.752 HYPERVISOR: exec_cmd: vm extract_config CE4-1 
+Nov 17 18:47:39.777 HYPERVISOR: exec_cmd: vm extract_config CE4-1 
+Nov 17 18:47:42.898 HYPERVISOR: exec_cmd: vm get_status CE4-1 
+Nov 17 18:47:42.898 HYPERVISOR: exec_cmd: vm stop CE4-1 
+Nov 17 18:47:43.006 VM: VM CE4-1 shutdown.
+Nov 17 18:47:43.007 HYPERVISOR: exec_cmd: vm extract_config CE4-1 
+Nov 17 19:27:37.779 HYPERVISOR: exec_cmd: vm set_ghost_status CE4-1 2 
+Nov 17 19:27:37.780 HYPERVISOR: exec_cmd: vm set_ghost_file CE4-1 /home/andre/Desktop/ET/LabsET1819/Lab2_3/lab3_gns3_files/project-files/dynamips/c3725-advipservicesk9-mz.124-21.image-128.ghost 
+Nov 17 19:27:37.780 HYPERVISOR: exec_cmd: vm get_status CE4-1 
+Nov 17 19:27:37.780 HYPERVISOR: exec_cmd: vm set_config CE4-1 configs/i15_startup-config.cfg 
+Nov 17 19:27:37.781 HYPERVISOR: exec_cmd: vm start CE4-1 
+Nov 17 19:39:08.170 HYPERVISOR: exec_cmd: vm extract_config CE4-1 
+Nov 17 19:39:08.284 HYPERVISOR: exec_cmd: vm extract_config CE4-1 
+Nov 17 19:43:24.671 HYPERVISOR: exec_cmd: vm get_status CE4-1 
+Nov 17 19:43:24.672 HYPERVISOR: exec_cmd: vm stop CE4-1 
+Nov 17 19:43:24.769 VM: VM CE4-1 shutdown.
+Nov 17 19:43:24.769 HYPERVISOR: exec_cmd: vm extract_config CE4-1 
+Nov 17 19:43:31.644 HYPERVISOR: exec_cmd: vm get_status CE4-1 
+Nov 17 19:43:31.647 HYPERVISOR: exec_cmd: vm extract_config CE4-1 
+Nov 17 19:43:31.894 HYPERVISOR: exec_cmd: vm get_status CE4-1 
+Nov 17 19:43:31.895 HYPERVISOR: exec_cmd: vm extract_config CE4-1 
+Nov 17 19:43:31.898 HYPERVISOR: exec_cmd: vm delete CE4-1 
+Nov 17 19:43:31.898 VM: VM CE4-1 destroyed.
+Nov 17 19:43:31.899 HYPERVISOR: exec_cmd: hypervisor stop 
+Nov 17 19:43:31.905 HYPERVISOR: Stopped.
+Nov 17 19:43:31.905 GENERAL: reset done.

@@ -1,0 +1,50 @@
+Nov 17 18:36:18.370 HYPERVISOR: Release 0.2.18-amd64/Linux (tag 2018033112)
+Nov 17 18:36:18.370 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 38673.
+Nov 17 18:36:18.382 HYPERVISOR: exec_cmd: hypervisor version 
+Nov 17 18:36:18.382 HYPERVISOR: exec_cmd: hypervisor working_dir /home/andre/Desktop/ET/LabsET1819/Lab2_3/lab3_gns3_files/project-files/dynamips 
+Nov 17 18:36:18.383 GENERAL: working_dir=/home/andre/Desktop/ET/LabsET1819/Lab2_3/lab3_gns3_files/project-files/dynamips
+Nov 17 18:36:18.384 HYPERVISOR: exec_cmd: hypervisor working_dir /home/andre/Desktop/ET/LabsET1819/Lab2_3/lab3_gns3_files/project-files/dynamips/3b986668-fca8-4e45-853d-bf17d0a767f9 
+Nov 17 18:36:18.384 GENERAL: working_dir=/home/andre/Desktop/ET/LabsET1819/Lab2_3/lab3_gns3_files/project-files/dynamips/3b986668-fca8-4e45-853d-bf17d0a767f9
+Nov 17 18:36:18.385 HYPERVISOR: exec_cmd: vm create CE2-2 14 c3725 
+Nov 17 18:36:18.385 VM: VM CE2-2 created.
+Nov 17 18:36:18.386 HYPERVISOR: exec_cmd: vm set_con_tcp_port CE2-2 5024 
+Nov 17 18:36:18.386 HYPERVISOR: exec_cmd: c3725 get_mac_addr CE2-2 
+Nov 17 18:36:18.387 HYPERVISOR: exec_cmd: vm set_disk0 CE2-2 0 
+Nov 17 18:36:18.388 HYPERVISOR: exec_cmd: vm get_status CE2-2 
+Nov 17 18:36:18.388 HYPERVISOR: exec_cmd: vm set_idle_pc CE2-2 0x60a6a1e0 
+Nov 17 18:36:18.390 HYPERVISOR: exec_cmd: vm set_ios CE2-2 /home/andre/GNS3/images/IOS/c3725-advipservicesk9-mz.124-21.image 
+Nov 17 18:36:18.391 HYPERVISOR: exec_cmd: c3725 set_mac_addr CE2-2 c20e.1338.0000 
+Nov 17 18:36:18.392 HYPERVISOR: exec_cmd: vm set_nvram CE2-2 256 
+Nov 17 18:36:21.025 HYPERVISOR: exec_cmd: nio create_udp udp-735d9087-2350-4937-945c-9ca7a69a69c1 10104 127.0.0.1 10105 
+Nov 17 18:36:21.046 HYPERVISOR: exec_cmd: vm slot_add_nio_binding CE2-2 0 0 udp-735d9087-2350-4937-945c-9ca7a69a69c1 
+Nov 17 18:36:21.046 HYPERVISOR: exec_cmd: vm get_status CE2-2 
+Nov 17 18:36:21.242 HYPERVISOR: exec_cmd: nio create_udp udp-bd4df0b8-ef41-43e9-bc87-0880623b9170 10116 127.0.0.1 10117 
+Nov 17 18:36:21.243 HYPERVISOR: exec_cmd: vm slot_add_nio_binding CE2-2 0 1 udp-bd4df0b8-ef41-43e9-bc87-0880623b9170 
+Nov 17 18:36:21.244 HYPERVISOR: exec_cmd: vm get_status CE2-2 
+Nov 17 18:36:39.158 HYPERVISOR: exec_cmd: vm set_ghost_status CE2-2 2 
+Nov 17 18:36:39.160 HYPERVISOR: exec_cmd: vm set_ghost_file CE2-2 /home/andre/Desktop/ET/LabsET1819/Lab2_3/lab3_gns3_files/project-files/dynamips/c3725-advipservicesk9-mz.124-21.image-128.ghost 
+Nov 17 18:36:39.160 HYPERVISOR: exec_cmd: vm get_status CE2-2 
+Nov 17 18:36:39.164 HYPERVISOR: exec_cmd: vm set_config CE2-2 configs/i14_startup-config.cfg 
+Nov 17 18:36:39.165 HYPERVISOR: exec_cmd: vm start CE2-2 
+Nov 17 18:47:42.746 HYPERVISOR: exec_cmd: vm get_status CE2-2 
+Nov 17 18:47:42.746 HYPERVISOR: exec_cmd: vm stop CE2-2 
+Nov 17 18:47:42.845 VM: VM CE2-2 shutdown.
+Nov 17 18:47:42.846 HYPERVISOR: exec_cmd: vm extract_config CE2-2 
+Nov 17 19:27:37.560 HYPERVISOR: exec_cmd: vm set_ghost_status CE2-2 2 
+Nov 17 19:27:37.561 HYPERVISOR: exec_cmd: vm set_ghost_file CE2-2 /home/andre/Desktop/ET/LabsET1819/Lab2_3/lab3_gns3_files/project-files/dynamips/c3725-advipservicesk9-mz.124-21.image-128.ghost 
+Nov 17 19:27:37.561 HYPERVISOR: exec_cmd: vm get_status CE2-2 
+Nov 17 19:27:37.568 HYPERVISOR: exec_cmd: vm set_config CE2-2 configs/i14_startup-config.cfg 
+Nov 17 19:27:37.569 HYPERVISOR: exec_cmd: vm start CE2-2 
+Nov 17 19:43:24.479 HYPERVISOR: exec_cmd: vm get_status CE2-2 
+Nov 17 19:43:24.479 HYPERVISOR: exec_cmd: vm stop CE2-2 
+Nov 17 19:43:24.599 VM: VM CE2-2 shutdown.
+Nov 17 19:43:24.600 HYPERVISOR: exec_cmd: vm extract_config CE2-2 
+Nov 17 19:43:31.640 HYPERVISOR: exec_cmd: vm get_status CE2-2 
+Nov 17 19:43:31.640 HYPERVISOR: exec_cmd: vm extract_config CE2-2 
+Nov 17 19:43:31.998 HYPERVISOR: exec_cmd: vm get_status CE2-2 
+Nov 17 19:43:31.999 HYPERVISOR: exec_cmd: vm extract_config CE2-2 
+Nov 17 19:43:32.001 HYPERVISOR: exec_cmd: vm delete CE2-2 
+Nov 17 19:43:32.001 VM: VM CE2-2 destroyed.
+Nov 17 19:43:32.002 HYPERVISOR: exec_cmd: hypervisor stop 
+Nov 17 19:43:32.277 HYPERVISOR: Stopped.
+Nov 17 19:43:32.277 GENERAL: reset done.
