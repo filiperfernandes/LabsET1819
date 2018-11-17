@@ -196,8 +196,8 @@
                 "drawing_id": "e9252a12-0f74-4099-abb7-de01a14cb065",
                 "rotation": 0,
                 "svg": "<svg height=\"25\" width=\"31\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\">.29</text></svg>",
-                "x": 17,
-                "y": -27,
+                "x": 23,
+                "y": -32,
                 "z": 1
             },
             {
@@ -244,8 +244,8 @@
                 "drawing_id": "2f3cbee0-52c6-4cc5-ae33-273a80705b76",
                 "rotation": 0,
                 "svg": "<svg height=\"25\" width=\"31\"><text fill=\"#000000\" fill-opacity=\"1.0\" font-family=\"TypeWriter\" font-size=\"10.0\" font-weight=\"bold\">.13</text></svg>",
-                "x": -136,
-                "y": -103,
+                "x": -129,
+                "y": -100,
                 "z": 1
             },
             {
@@ -754,7 +754,7 @@
                             "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
                             "text": "f2/0",
                             "x": -50,
-                            "y": 35
+                            "y": 31
                         },
                         "node_id": "ab478924-5ac8-42a4-b94e-d651dce4cdc4",
                         "port_number": 0
@@ -1157,7 +1157,7 @@
                             "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
                             "text": "f0/0",
                             "x": -27,
-                            "y": 29
+                            "y": 28
                         },
                         "node_id": "754f9cbb-0a96-4adc-80c2-5cf2810e32cf",
                         "port_number": 0
@@ -1464,8 +1464,8 @@
                 },
                 "symbol": ":/symbols/router.svg",
                 "width": 66,
-                "x": -210,
-                "y": -74,
+                "x": -200,
+                "y": -72,
                 "z": 0
             },
             {
@@ -2098,7 +2098,7 @@
                     "platform": "c3725",
                     "ram": 128,
                     "slot0": "GT96100-FE",
-                    "slot1": "NM-16ESW",
+                    "slot1": null,
                     "slot2": null,
                     "sparsemem": true,
                     "system_id": "FTX0945W0MY",
@@ -2108,7 +2108,7 @@
                 },
                 "symbol": ":/symbols/router.svg",
                 "width": 66,
-                "x": -507,
+                "x": -508,
                 "y": 15,
                 "z": 0
             },
@@ -2175,7 +2175,7 @@
                     "platform": "c3725",
                     "ram": 128,
                     "slot0": "GT96100-FE",
-                    "slot1": "NM-16ESW",
+                    "slot1": null,
                     "slot2": null,
                     "sparsemem": true,
                     "system_id": "FTX0945W0MY",
@@ -2186,7 +2186,7 @@
                 "symbol": ":/symbols/router.svg",
                 "width": 66,
                 "x": 412,
-                "y": 19,
+                "y": 18,
                 "z": 0
             },
             {
