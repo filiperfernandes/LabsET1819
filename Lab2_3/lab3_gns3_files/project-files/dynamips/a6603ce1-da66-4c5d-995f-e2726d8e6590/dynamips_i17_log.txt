@@ -1,0 +1,54 @@
+Nov 19 15:50:32.277 HYPERVISOR: Release 0.2.18-amd64/Linux (tag 2018033112)
+Nov 19 15:50:32.277 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 40695.
+Nov 19 15:50:32.287 HYPERVISOR: exec_cmd: hypervisor version 
+Nov 19 15:50:32.288 HYPERVISOR: exec_cmd: hypervisor working_dir /home/andre/Desktop/ET/LabsET1819/Lab2_3/lab3_gns3_files/project-files/dynamips 
+Nov 19 15:50:32.288 GENERAL: working_dir=/home/andre/Desktop/ET/LabsET1819/Lab2_3/lab3_gns3_files/project-files/dynamips
+Nov 19 15:50:32.288 HYPERVISOR: exec_cmd: hypervisor working_dir /home/andre/Desktop/ET/LabsET1819/Lab2_3/lab3_gns3_files/project-files/dynamips/b6788f14-e3ad-4c57-b10a-21d78657aa2a 
+Nov 19 15:50:32.288 GENERAL: working_dir=/home/andre/Desktop/ET/LabsET1819/Lab2_3/lab3_gns3_files/project-files/dynamips/b6788f14-e3ad-4c57-b10a-21d78657aa2a
+Nov 19 15:50:32.289 HYPERVISOR: exec_cmd: vm create CE3-1 16 c3725 
+Nov 19 15:50:32.289 VM: VM CE3-1 created.
+Nov 19 15:50:32.290 HYPERVISOR: exec_cmd: vm set_con_tcp_port CE3-1 5028 
+Nov 19 15:50:32.290 HYPERVISOR: exec_cmd: c3725 get_mac_addr CE3-1 
+Nov 19 15:50:32.291 HYPERVISOR: exec_cmd: vm set_disk0 CE3-1 0 
+Nov 19 15:50:32.292 HYPERVISOR: exec_cmd: vm get_status CE3-1 
+Nov 19 15:50:32.292 HYPERVISOR: exec_cmd: vm set_idle_pc CE3-1 0x60a6a1e0 
+Nov 19 15:50:32.294 HYPERVISOR: exec_cmd: vm set_ios CE3-1 /home/andre/GNS3/images/IOS/c3725-advipservicesk9-mz.124-21.image 
+Nov 19 15:50:32.295 HYPERVISOR: exec_cmd: c3725 set_mac_addr CE3-1 c210.26b6.0000 
+Nov 19 15:50:32.296 HYPERVISOR: exec_cmd: vm set_nvram CE3-1 256 
+Nov 19 15:50:35.219 HYPERVISOR: exec_cmd: nio create_udp udp-60a328a1-6c1d-416a-9a1b-b234395bc672 10132 127.0.0.1 10133 
+Nov 19 15:50:35.237 HYPERVISOR: exec_cmd: vm slot_add_nio_binding CE3-1 0 0 udp-60a328a1-6c1d-416a-9a1b-b234395bc672 
+Nov 19 15:50:35.237 HYPERVISOR: exec_cmd: vm get_status CE3-1 
+Nov 19 15:50:35.304 HYPERVISOR: exec_cmd: nio create_udp udp-d1c06d8d-aca8-4797-aea1-1f50caaa57ff 10136 127.0.0.1 10137 
+Nov 19 15:50:35.305 HYPERVISOR: exec_cmd: vm slot_add_nio_binding CE3-1 0 1 udp-d1c06d8d-aca8-4797-aea1-1f50caaa57ff 
+Nov 19 15:50:35.305 HYPERVISOR: exec_cmd: vm get_status CE3-1 
+Nov 19 15:51:16.046 HYPERVISOR: exec_cmd: vm set_ghost_status CE3-1 2 
+Nov 19 15:51:16.053 HYPERVISOR: exec_cmd: vm set_ghost_file CE3-1 /home/andre/Desktop/ET/LabsET1819/Lab2_3/lab3_gns3_files/project-files/dynamips/c3725-advipservicesk9-mz.124-21.image-128.ghost 
+Nov 19 15:51:16.053 HYPERVISOR: exec_cmd: vm get_status CE3-1 
+Nov 19 15:51:16.084 HYPERVISOR: exec_cmd: vm set_config CE3-1 configs/i16_startup-config.cfg 
+Nov 19 15:51:16.087 HYPERVISOR: exec_cmd: vm start CE3-1 
+Nov 19 16:21:45.804 HYPERVISOR: exec_cmd: vm get_status CE3-1 
+Nov 19 16:21:45.804 HYPERVISOR: exec_cmd: vm stop CE3-1 
+Nov 19 16:21:45.909 VM: VM CE3-1 shutdown.
+Nov 19 16:21:45.910 HYPERVISOR: exec_cmd: vm extract_config CE3-1 
+Nov 19 16:24:29.010 HYPERVISOR: exec_cmd: vm get_status CE3-1 
+Nov 19 16:24:29.011 HYPERVISOR: exec_cmd: vm slot_remove_nio_binding CE3-1 0 1 
+Nov 19 16:24:29.013 HYPERVISOR: exec_cmd: nio delete udp-d1c06d8d-aca8-4797-aea1-1f50caaa57ff 
+Nov 19 16:25:02.841 HYPERVISOR: exec_cmd: vm set_ios CE3-1 /home/andre/GNS3/images/IOS/c3725-advipservicesk9-mz.124-21.image 
+Nov 19 16:27:16.695 HYPERVISOR: exec_cmd: vm set_ghost_status CE3-1 2 
+Nov 19 16:27:16.696 HYPERVISOR: exec_cmd: vm set_ghost_file CE3-1 /home/andre/Desktop/ET/LabsET1819/Lab2_3/lab3_gns3_files/project-files/dynamips/c3725-advipservicesk9-mz.124-21.image-128.ghost 
+Nov 19 16:27:16.696 HYPERVISOR: exec_cmd: vm get_status CE3-1 
+Nov 19 16:27:16.697 HYPERVISOR: exec_cmd: vm set_config CE3-1 configs/i16_startup-config.cfg 
+Nov 19 16:27:16.698 HYPERVISOR: exec_cmd: vm start CE3-1 
+Nov 19 16:33:00.640 HYPERVISOR: exec_cmd: vm get_status CE3-1 
+Nov 19 16:33:00.640 HYPERVISOR: exec_cmd: vm stop CE3-1 
+Nov 19 16:33:00.716 VM: VM CE3-1 shutdown.
+Nov 19 16:33:00.716 HYPERVISOR: exec_cmd: vm extract_config CE3-1 
+Nov 19 16:33:09.317 HYPERVISOR: exec_cmd: vm get_status CE3-1 
+Nov 19 16:33:09.318 HYPERVISOR: exec_cmd: vm extract_config CE3-1 
+Nov 19 16:33:09.663 HYPERVISOR: exec_cmd: vm get_status CE3-1 
+Nov 19 16:33:09.663 HYPERVISOR: exec_cmd: vm extract_config CE3-1 
+Nov 19 16:33:09.664 HYPERVISOR: exec_cmd: vm delete CE3-1 
+Nov 19 16:33:09.664 VM: VM CE3-1 destroyed.
+Nov 19 16:33:09.664 HYPERVISOR: exec_cmd: hypervisor stop 
+Nov 19 16:33:09.724 HYPERVISOR: Stopped.
+Nov 19 16:33:09.724 GENERAL: reset done.
