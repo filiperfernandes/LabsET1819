@@ -1665,7 +1665,7 @@
             },
             {
                 "compute_id": "local",
-                "console": 5012,
+                "console": 5007,
                 "console_type": "telnet",
                 "first_port_name": null,
                 "height": 32,
@@ -1787,8 +1787,8 @@
                 },
                 "symbol": ":/symbols/router.svg",
                 "width": 66,
-                "x": -534,
-                "y": -186,
+                "x": -531,
+                "y": -189,
                 "z": 0
             },
             {
@@ -1943,7 +1943,7 @@
                 },
                 "symbol": ":/symbols/router.svg",
                 "width": 66,
-                "x": 457,
+                "x": 458,
                 "y": 14,
                 "z": 0
             },
@@ -1996,7 +1996,7 @@
                 "symbol": ":/symbols/router.svg",
                 "width": 66,
                 "x": -552,
-                "y": 301,
+                "y": 300,
                 "z": 0
             },
             {
