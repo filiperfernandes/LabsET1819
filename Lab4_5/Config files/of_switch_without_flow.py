@@ -87,6 +87,8 @@ class Tutorial (object):
     # Learn the port for the source MAC
     self.mac_to_port.update({packet.src: packet_in.in_port})
 
+    log.debug(self.mac_to_port)
+
     if  self.mac_to_port.get(packet.dst) is not None:
         # Send packet out the associated port
         self.resend_packet(packet_in, self.mac_to_port.get(packet.dst))
