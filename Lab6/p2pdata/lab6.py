@@ -1,6 +1,7 @@
 import pandas as pd
 
 files = ["1-labeled.dat", "2-labeled.dat", "3-labeled.dat", "4-labeled.dat"]
+files_u = ["1-unlabeled.dat", "2-unlabeled.dat", "3-unlabeled.dat", "4-unlabeled.dat"]
 df = pd.read_csv(files[0])
 
 
@@ -28,13 +29,13 @@ def index():
         # Populate IP dictionary
         if ip not in list_ip:
             list_ip.append(ip)
-            if p2p=="p2p":
+            if p2p == "p2p":
                 dic_ips.update({ip: (1,0)})
             else:
                 dic_ips.update({ip: (0, 1)})
         else:
             tmp = dic_ips.get(ip)
-            if p2p=="p2p":
+            if p2p == "p2p":
                 tmp = (tmp[0]+1,tmp[1])
                 dic_ips.update({ip: tmp})
             else:
@@ -44,13 +45,13 @@ def index():
         # Populate Connection dictionary
         if connection not in list_connection:
             list_connection.append(connection)
-            if p2p=="p2p":
+            if p2p =="p2p":
                 dic_connection.update({connection: (1,0)})
             else:
                 dic_connection.update({connection: (0, 1)})
         else:
             tmp = dic_connection.get(connection)
-            if p2p=="p2p":
+            if p2p =="p2p":
                 tmp = (tmp[0]+1,tmp[1])
                 dic_connection.update({connection: tmp})
             else:
@@ -60,13 +61,13 @@ def index():
         # Populate bandwidth dictionary
         if band not in list_bandwidth:
             list_bandwidth.append(band)
-            if p2p=="p2p":
+            if p2p =="p2p":
                 dic_bandwidth.update({band: (1,0)})
             else:
                 dic_bandwidth.update({band: (0, 1)})
         else:
             tmp = dic_bandwidth.get(band)
-            if p2p=="p2p":
+            if p2p =="p2p":
                 tmp = (tmp[0]+1,tmp[1])
                 dic_bandwidth.update({band: tmp})
             else:
@@ -76,13 +77,13 @@ def index():
         # Populate packet_size dictionary
         if packet_size not in list_packet_size:
             list_packet_size.append(packet_size)
-            if p2p=="p2p":
+            if p2p =="p2p":
                 dic_packet_size.update({packet_size: (1,0)})
             else:
                 dic_packet_size.update({packet_size: (0, 1)})
         else:
             tmp = dic_packet_size.get(packet_size)
-            if p2p=="p2p":
+            if p2p =="p2p":
                 tmp = (tmp[0]+1,tmp[1])
                 dic_packet_size.update({packet_size: tmp})
             else:
@@ -92,13 +93,13 @@ def index():
         # Populate time dictionary
         if time not in list_time:
             list_time.append(time)
-            if p2p=="p2p":
+            if p2p =="p2p":
                 dic_time.update({time: (1,0)})
             else:
                 dic_time.update({time: (0, 1)})
         else:
             tmp = dic_time.get(time)
-            if p2p=="p2p":
+            if p2p =="p2p":
                 tmp = (tmp[0]+1,tmp[1])
                 dic_time.update({time: tmp})
             else:
@@ -140,17 +141,34 @@ def index():
     return dic_ips, dic_connection, dic_bandwidth, dic_packet_size, dic_time, dic_p2p
 
 
-def prob(dic_p2p):
+def prob_p2p(dic_p2p):
     prob_p2p = dic_p2p["p2p"] / (dic_p2p["p2p"] + dic_p2p["not p2p"])
     prob_Np2p = dic_p2p["not p2p"] / (dic_p2p["p2p"] + dic_p2p["not p2p"])
     print(prob_p2p)
     print(prob_Np2p)
 
 
+def output(dic_ips, dic_connection, dic_bandwidth, dic_packet_size, dic_time, prob_p2p, prob_Np2p):
+    dfu = pd.read_csv(files_u[0])
+    for n in range(len(dfu)):
+        ip_u = dfu.values[n][0]
+        connection_u = dfu.values[n][1]
+        band_u = dfu.values[n][2]
+        packet_size_u = dfu.values[n][3]
+        time_u = dfu.values[n][4]
+        ip_label_ip = dic_ips.get(ip_u)
+        if ip_label_ip is not None:
+            IP_p2p = ip_label_ip[0]+(ip_label_ip[0] + ip_label_ip[1])
+            IP_Np2p = ip_label_ip[1]+(ip_label_ip[0] + ip_label_ip[1])
+        ip_label_connection = dic_connection.get(connection_u)
+
+
+
+
+
 def main():
     dic_ips, dic_connection, dic_bandwidth, dic_packet_size, dic_time, dic_p2p = index()
-    prob(dic_p2p)
+    prob_p2p(dic_p2p)
 
 
-#main()
-index()
+main()
