@@ -154,3 +154,6 @@ def main():
 
 #main()
 index()
+
+if __name__ == "__main__":
+    main()
