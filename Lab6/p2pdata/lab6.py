@@ -36,16 +36,16 @@ def index():
         else:
             tmp = dic_ips.get(ip)
             if p2p == "p2p":
-                tmp = (tmp[0]+1,tmp[1])
+                tmp = (tmp[0]+1, tmp[1])
                 dic_ips.update({ip: tmp})
             else:
-                tmp = (tmp[0],tmp[1]+1)
+                tmp = (tmp[0], tmp[1]+1)
                 dic_ips.update({ip: tmp})
 
         # Populate Connection dictionary
         if connection not in list_connection:
             list_connection.append(connection)
-            if p2p =="p2p":
+            if p2p == "p2p":
                 dic_connection.update({connection: (1,0)})
             else:
                 dic_connection.update({connection: (0, 1)})
