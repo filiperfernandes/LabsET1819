@@ -171,4 +171,6 @@ def main():
     prob_p2p(dic_p2p)
 
 
-main()
+if __name__ == "__main__":
+    main()
+
