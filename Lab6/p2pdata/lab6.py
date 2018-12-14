@@ -17,7 +17,6 @@ def index():
     list_time = []
     dic_p2p = {}
     list_p2p = []
-    print(df)
     for n in range(len(df)):
         ip = df.values[n][0]
         connection = df.values[n][1]
@@ -64,9 +63,15 @@ def index():
     return dic_ips, dic_connection, dic_bandwidth, dic_packet_size, dic_time, dic_p2p
 
 
-def prob():
+def prob(dic_p2p):
+    prob_p2p = dic_p2p["p2p"] / (dic_p2p["p2p"] + dic_p2p["not p2p"])
+    prob_Np2p = dic_p2p["not p2p"] / (dic_p2p["p2p"] + dic_p2p["not p2p"])
+    print(prob_p2p)
+    print(prob_Np2p)
+
 
 def main():
-    dic_ips, dic_connection, dic_bandwidth, dic_packet_size, dic_time, dic_p2p  = index()
+    dic_ips, dic_connection, dic_bandwidth, dic_packet_size, dic_time, dic_p2p = index()
+    prob(dic_p2p)
 
 main()
