@@ -1,8 +1,17 @@
 import pandas as pd
+import random
 
 files = ["1-labeled.dat", "2-labeled.dat", "3-labeled.dat", "4-labeled.dat"]
 files_u = ["1-unlabeled.dat", "2-unlabeled.dat", "3-unlabeled.dat", "4-unlabeled.dat"]
-#df = pd.read_csv(files[0], header=None)
+
+
+def gen_random(start, end, num):
+    res = []
+
+    for j in range(num):
+        res.append(random.randint(start, end))
+
+    return res
 
 
 def index(filename):
@@ -19,8 +28,9 @@ def index(filename):
     list_time = []
     dic_p2p = {}
     list_p2p = []
+    random_entry = gen_random(0, 9999, 7000)
 
-    for n in range(0, 6999):
+    for n in random_entry:
 
         ip = df.values[n][0]
         connection = df.values[n][1]
