@@ -278,7 +278,7 @@ def main():
             print(files_u[count])
             dic_ips, dic_connection, dic_bandwidth, dic_packet_size, dic_time, dic_p2p = index(filename, "label", 1)
             prob_p2p, prob_np2p = get_prob(dic_p2p)
-            output(files_u[count], "label", dic_ips, dic_connection, dic_bandwidth, dic_packet_size, dic_time,
+            output(files_u[count], "label", [], dic_ips, dic_connection, dic_bandwidth, dic_packet_size, dic_time,
                    prob_p2p, prob_np2p)
             count += 1
 
