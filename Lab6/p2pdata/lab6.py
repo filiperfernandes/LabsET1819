@@ -119,6 +119,7 @@ def get_prob(dic_p2p):
     prob_np2p = dic_p2p["not p2p"] / (dic_p2p["p2p"] + dic_p2p["not p2p"])
     return prob_p2p, prob_np2p
 
+
 def output(filename, dic_ips, dic_connection, dic_bandwidth, dic_packet_size, dic_time, prob_p2p, prob_np2p):
     lines = []
     dfu = pd.read_csv(filename, header=None)
