@@ -120,7 +120,7 @@ def index(filename, mode, percentage):
                 tmp = (tmp[0]+1, tmp[1])
                 dic_packet_size.update({packet_size: tmp})
             else:
-                tmp = (tmp[0], tmp[1] + 1)
+                tmp = (tmp[0], tmp[1]+1)
                 dic_packet_size.update({packet_size: tmp})
 
         # Populate time dictionary
@@ -151,7 +151,7 @@ def index(filename, mode, percentage):
                 tmp = (tmp[0] + 1, tmp[1])
                 dic_p2p.update({"count": tmp})
             else:
-                tmp = (tmp[0], tmp[1] + 1)
+                tmp = (tmp[0], tmp[1]+1)
                 dic_p2p.update({"count": tmp})
 
     if mode == "error":
@@ -184,7 +184,9 @@ def output(filename, mode, missing_range, dic_ips, dic_connection, dic_bandwidth
         band_u = dfu.values[n][2]
         packet_size_u = dfu.values[n][3]
         time_u = dfu.values[n][4]
-        p2p_u = dfu.values[n][5]
+
+        if mode == "error":
+            p2p_u = dfu.values[n][5]
 
         # IP:
         ip_label_ip = dic_ips.get(ip_u)
