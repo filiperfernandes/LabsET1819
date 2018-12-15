@@ -2,10 +2,10 @@ import pandas as pd
 
 files = ["1-labeled.dat", "2-labeled.dat", "3-labeled.dat", "4-labeled.dat"]
 files_u = ["1-unlabeled.dat", "2-unlabeled.dat", "3-unlabeled.dat", "4-unlabeled.dat"]
-df = pd.read_csv(files[0])
 
 
-def index():
+def index(filename):
+    df = pd.read_csv(filename, header=None)
     dic_ips = {}
     list_ip = []
     dic_connection = {}
@@ -119,14 +119,9 @@ def get_prob(dic_p2p):
     prob_np2p = dic_p2p["not p2p"] / (dic_p2p["p2p"] + dic_p2p["not p2p"])
     return prob_p2p, prob_np2p
 
-
-
-
-
-
-
-def output(dic_ips, dic_connection, dic_bandwidth, dic_packet_size, dic_time, prob_p2p, prob_np2p):
-    dfu = pd.read_csv(files_u[0])
+def output(filename, dic_ips, dic_connection, dic_bandwidth, dic_packet_size, dic_time, prob_p2p, prob_np2p):
+    lines = []
+    dfu = pd.read_csv(filename, header=None)
     for n in range(len(dfu)):
         ip_u = dfu.values[n][0]
         connection_u = dfu.values[n][1]
@@ -139,63 +134,72 @@ def output(dic_ips, dic_connection, dic_bandwidth, dic_packet_size, dic_time, pr
         if ip_label_ip is not None:
             IP_p2p = ip_label_ip[0]/(ip_label_ip[0] + ip_label_ip[1])
             IP_np2p = ip_label_ip[1]/(ip_label_ip[0] + ip_label_ip[1])
-            print(ip_u)
 
         # Connection:
         ip_label_connection = dic_connection.get(connection_u)
         if ip_label_connection is not None:
             conn_p2p = ip_label_connection[0]/(ip_label_connection[0] + ip_label_connection[1])
-            conn_np2p = 1 - conn_p2p
+            conn_np2p = ip_label_connection[1]/(ip_label_connection[0] + ip_label_connection[1])
 
         # Bandwidth:
         ip_label_band = dic_bandwidth.get(band_u)
         if ip_label_band is not None:
             band_p2p = ip_label_band[0] / (ip_label_band[0] + ip_label_band[1])
-            band_np2p = 1 - band_p2p
+            band_np2p = ip_label_band[1] / (ip_label_band[0] + ip_label_band[1])
 
         # Packet_size:
         ip_label_packet = dic_packet_size.get(packet_size_u)
         if ip_label_packet is not None:
             packet_p2p = ip_label_packet[0] / (ip_label_packet[0] + ip_label_packet[1])
-            packet_np2p = 1 - packet_p2p
+            packet_np2p = ip_label_packet[1] / (ip_label_packet[0] + ip_label_packet[1])
+
 
         # Time:
         ip_label_time = dic_time.get(time_u)
         if ip_label_time is not None:
             time_p2p = ip_label_time[0] / (ip_label_time[0] + ip_label_time[1])
-            time_np2p = 1 - time_p2p
+            time_np2p = ip_label_time[1] / (ip_label_time[0] + ip_label_time[1])
 
         total_p2p = IP_p2p * conn_p2p * band_p2p * packet_p2p * time_p2p * prob_p2p
         total_np2p = IP_np2p * conn_np2p * band_np2p * packet_np2p * time_np2p * prob_np2p
 
-        print(ip_u)
-        print(connection_u)
-        print(band_u)
-        print(packet_size_u)
-        print(time_u)
-
         if total_p2p > total_np2p:
-            with open(files_u[0], 'r') as file:
-                # read a list of lines into data
-                data = file.readlines()
-            data[n] += ", p2p"
-            with open(files_u[0]+".new", 'w') as file:
-                file.writelines(data)
+            line = ip_u + "," + str(connection_u) + "," + str(band_u) + "," + str(packet_size_u) + "," + time_u + "," + "p2p\n"
+            lines.append(line)
+
         if total_p2p < total_np2p:
-            with open(files_u[0], 'r') as file:
-                # read a list of lines into data
-                data = file.readlines()
-            data[n] += ", not p2p"
-            with open(files_u[0]+".new", 'w') as file:
-                file.writelines(data)
+            line = ip_u + "," + str(connection_u) + "," + str(band_u) + "," + str(packet_size_u) + "," + time_u + "," + "not p2p\n"
+            lines.append(line)
+
+    # Write Output file
+    if filename.startswith("1-"):
+        f = open("out-1-labeled.dat", "w")
+        f.writelines(lines)
+        f.close()
+    if filename.startswith("2-"):
+        f = open("out-2-labeled.dat", "w")
+        f.writelines(lines)
+        f.close()
+    if filename.startswith("3-"):
+        f = open("out-3-labeled.dat", "w")
+        f.writelines(lines)
+        f.close()
+    if filename.startswith("4-"):
+        f = open("out-4-labeled.dat", "w")
+        f.writelines(lines)
+        f.close()
 
 
 def main():
-    dic_ips, dic_connection, dic_bandwidth, dic_packet_size, dic_time, dic_p2p = index()
-    prob_p2p, prob_np2p = get_prob(dic_p2p)
-    output(dic_ips, dic_connection, dic_bandwidth, dic_packet_size, dic_time, prob_p2p, prob_np2p)
+    count = 0
+    for filename in files:
+        print(filename)
+        print(files_u[count])
+        dic_ips, dic_connection, dic_bandwidth, dic_packet_size, dic_time, dic_p2p = index(filename)
+        prob_p2p, prob_np2p = get_prob(dic_p2p)
+        output(files_u[count], dic_ips, dic_connection, dic_bandwidth, dic_packet_size, dic_time, prob_p2p, prob_np2p)
+        count += 1
 
 
 if __name__ == "__main__":
     main()
-
