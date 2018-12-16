@@ -175,6 +175,8 @@ def output(filename, mode, missing_range, dic_ips, dic_connection, dic_bandwidth
         mode_range = range(len(dfu))
     else:
         error = 0
+        false_positive = 0
+        false_negative = 0
         nr_times = 0
         mode_range = missing_range
 
@@ -236,10 +238,12 @@ def output(filename, mode, missing_range, dic_ips, dic_connection, dic_bandwidth
             if total_p2p > total_np2p:
                 if p2p_u != "p2p":
                     error = error + 1
+                    false_positive += 1
 
             if total_p2p < total_np2p:
                 if p2p_u != "not p2p":
                     error = error + 1
+                    false_negative += 1
             nr_times = nr_times + 1
 
     if mode == "label":
@@ -262,7 +266,11 @@ def output(filename, mode, missing_range, dic_ips, dic_connection, dic_bandwidth
             f.close()
     else:
         perc_error = (error / nr_times) * 100
+        false_positive_rate = (false_positive / nr_times) * 100
+        false_negative_rate = (false_negative / nr_times) * 100
         print("Error =", perc_error, "%")
+        print("False positive =", false_positive_rate, "%")
+        print("False negative =", false_negative_rate, "%")
 
 
 def main():
