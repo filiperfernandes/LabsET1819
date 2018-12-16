@@ -10,7 +10,6 @@ def gen_random(start, end, num):
 
     for j in range(num):
         res.append(random.randint(start, end))
-
     return res
 
 
@@ -133,7 +132,7 @@ def index(filename):
             else:
                 tmp = (tmp[0], tmp[1] + 1)
                 dic_p2p.update({"count": tmp})
-    return dic_ips, dic_connection, dic_bandwidth, dic_packet_size, dic_time, dic_p2p
+    return dic_ips, dic_connection, dic_bandwidth, dic_packet_size, dic_time, dic_p2p, random_entry
 
 
 def get_prob(dic_p2p):
@@ -142,58 +141,59 @@ def get_prob(dic_p2p):
     return prob_p2p, prob_np2p
 
 
-def output(filename, dic_ips, dic_connection, dic_bandwidth, dic_packet_size, dic_time, prob_p2p, prob_np2p):
+def output(filename, dic_ips, dic_connection, dic_bandwidth, dic_packet_size, dic_time, prob_p2p, prob_np2p, random_entry):
     error = 0
     nr_times = 0
     df = pd.read_csv(filename, header=None)
-    for n in range(7000, len(df)):
-        ip_u = df.values[n][0]
-        connection_u = df.values[n][1]
-        band_u = df.values[n][2]
-        packet_size_u = df.values[n][3]
-        time_u = df.values[n][4]
-        p2p_u = df.values[n][5]
+    for n in range(0, len(df)):
+        if n not in random_entry:
+            ip_u = df.values[n][0]
+            connection_u = df.values[n][1]
+            band_u = df.values[n][2]
+            packet_size_u = df.values[n][3]
+            time_u = df.values[n][4]
+            p2p_u = df.values[n][5]
 
-        # IP:
-        ip_label_ip = dic_ips.get(ip_u)
-        if ip_label_ip is not None:
-            IP_p2p = ip_label_ip[0]/prob_p2p
-            IP_np2p = ip_label_ip[1]/prob_np2p
+            # IP:
+            ip_label_ip = dic_ips.get(ip_u)
+            if ip_label_ip is not None:
+                IP_p2p = ip_label_ip[0]/prob_p2p
+                IP_np2p = ip_label_ip[1]/prob_np2p
 
-        # Connection:
-        ip_label_connection = dic_connection.get(connection_u)
-        if ip_label_connection is not None:
-            conn_p2p = ip_label_connection[0]/prob_p2p
-            conn_np2p = ip_label_connection[1]/prob_np2p
+            # Connection:
+            ip_label_connection = dic_connection.get(connection_u)
+            if ip_label_connection is not None:
+                conn_p2p = ip_label_connection[0]/prob_p2p
+                conn_np2p = ip_label_connection[1]/prob_np2p
 
-        # Bandwidth:
-        ip_label_band = dic_bandwidth.get(band_u)
-        if ip_label_band is not None:
-            band_p2p = ip_label_band[0] / prob_p2p
-            band_np2p = ip_label_band[1] / prob_np2p
+            # Bandwidth:
+            ip_label_band = dic_bandwidth.get(band_u)
+            if ip_label_band is not None:
+                band_p2p = ip_label_band[0] / prob_p2p
+                band_np2p = ip_label_band[1] / prob_np2p
 
-        # Packet_size:
-        ip_label_packet = dic_packet_size.get(packet_size_u)
-        if ip_label_packet is not None:
-            packet_p2p = ip_label_packet[0] / prob_p2p
-            packet_np2p = ip_label_packet[1] / prob_np2p
-        # Time:
-        ip_label_time = dic_time.get(time_u)
-        if ip_label_time is not None:
-            time_p2p = ip_label_time[0] / prob_p2p
-            time_np2p = ip_label_time[1] / prob_np2p
+            # Packet_size:
+            ip_label_packet = dic_packet_size.get(packet_size_u)
+            if ip_label_packet is not None:
+                packet_p2p = ip_label_packet[0] / prob_p2p
+                packet_np2p = ip_label_packet[1] / prob_np2p
+            # Time:
+            ip_label_time = dic_time.get(time_u)
+            if ip_label_time is not None:
+                time_p2p = ip_label_time[0] / prob_p2p
+                time_np2p = ip_label_time[1] / prob_np2p
 
-        total_p2p = IP_p2p * conn_p2p * band_p2p * packet_p2p * time_p2p * prob_p2p
-        total_np2p = IP_np2p * conn_np2p * band_np2p * packet_np2p * time_np2p * prob_np2p
+            total_p2p = IP_p2p * conn_p2p * band_p2p * packet_p2p * time_p2p * prob_p2p
+            total_np2p = IP_np2p * conn_np2p * band_np2p * packet_np2p * time_np2p * prob_np2p
 
-        if total_p2p > total_np2p:
-            if p2p_u != "p2p":
-                error = error + 1
+            if total_p2p > total_np2p:
+                if p2p_u != "p2p":
+                    error = error + 1
 
-        if total_p2p < total_np2p:
-            if p2p_u != "not p2p":
-                error = error + 1
-        nr_times = nr_times + 1
+            if total_p2p < total_np2p:
+                if p2p_u != "not p2p":
+                    error = error + 1
+            nr_times = nr_times + 1
 
     perc_error = (error / nr_times) * 100
     print("Error =", perc_error, "%")
@@ -202,9 +202,9 @@ def output(filename, dic_ips, dic_connection, dic_bandwidth, dic_packet_size, di
 def main():
     for filename in files:
         print(filename)
-        dic_ips, dic_connection, dic_bandwidth, dic_packet_size, dic_time, dic_p2p = index(filename)
+        dic_ips, dic_connection, dic_bandwidth, dic_packet_size, dic_time, dic_p2p, random_entry = index(filename)
         prob_p2p, prob_np2p = get_prob(dic_p2p)
-        output(filename, dic_ips, dic_connection, dic_bandwidth, dic_packet_size, dic_time, prob_p2p, prob_np2p)
+        output(filename, dic_ips, dic_connection, dic_bandwidth, dic_packet_size, dic_time, prob_p2p, prob_np2p, random_entry)
 
 
 if __name__ == "__main__":
